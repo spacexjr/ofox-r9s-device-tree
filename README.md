@@ -1,4 +1,4 @@
-# TWRP Device Tree for Samsung Galaxy S21 FE Exynos (5G) 
+# OFOX Device Tree for Samsung Galaxy S21 FE Exynos (5G) 
 # SM-G990E/DS
 
 ## Release and install instructions
