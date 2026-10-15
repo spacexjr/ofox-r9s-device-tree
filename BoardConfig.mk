@@ -128,7 +128,9 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 TW_DEVICE_VERSION := 1_mlx
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
+# ----------- Blue FOX bug here --------------------
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+# --------------------------------------------------
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 561
 TW_DEFAULT_BRIGHTNESS := 255
