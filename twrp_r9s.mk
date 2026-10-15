@@ -15,6 +15,7 @@
 #
 
 # Release name
+OF_MAINTAINER := BMO
 PRODUCT_RELEASE_NAME := r9s
 
 # Inherit from common AOSP config

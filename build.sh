@@ -35,6 +35,9 @@ echo "==> Jobs                : -j${JOBS}"
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_BUILD_DEVICE="${DEVICE}"
 
+# Apply BMO theme assets
+"${SCRIPT_DIR}/tools/bmotheme.sh"
+
 # NOTE: build/envsetup.sh returns a non-zero status (its last internal command
 # short-circuits), so don't run this under `set -e`.
 # shellcheck disable=SC1091
