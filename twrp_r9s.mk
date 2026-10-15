@@ -1,7 +1,5 @@
 #
-# Copyright (C) 2023 The Android Open Source Project
-#
-# SPDX-License-Identifier: Apache-2.0
+# Copyright (C) 2022 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -38,11 +36,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/r9s/recovery/root,recovery/root)
 
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := twrp_r9s
 PRODUCT_DEVICE := r9s
 PRODUCT_MODEL := SM-G990E
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
+PRODUCT_GMS_CLIENTID_BASE := android-samsung

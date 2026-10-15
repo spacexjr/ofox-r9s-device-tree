@@ -1,7 +1,5 @@
 #
-# Copyright (C) 2023 The Android Open Source Project
-#
-# SPDX-License-Identifier: Apache-2.0
+# Copyright (C) 2022 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,8 +14,6 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/r9s
-
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -25,28 +21,3 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
-    
-# Enable Fuse Passthrough
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.fuse.passthrough.enable=true
-
-# Keymaster and Gatekeeper Initalization
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.crypto.state=encrypted \
-    ro.crypto.type=file \
-    ro.crypto.volume.filenames_mode=aes-256-cts
-
-# Gatekeeper/Keymaster HAL Packages
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.keymaster@4.0-service \
-    android.hardware.keymaster@4.0-impl \
-    android.hardware.keymaster@4.0-strongbox-service
-
-# For Prebuild Vendor
-# PRODUCT_COPY_FILES += \
-#    vendor/samsung/r9s/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service:recovery/root/vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service
-#    vendor/samsung/r9s/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-impl:recovery/root/vendor/bin/hw/android.hardware.keymaster@4.0-impl
-#    vendor/samsung/r9s/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service:recovery/root/vendor/bin/hw/android.hardware.keymaster@4.0-service
-#    vendor/samsung/r9s/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-impl:recovery/root/vendor/bin/hw/android.hardware.gatekeeper@1.0-impl
-#    vendor/samsung/r9s/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service:recovery/root/vendor/bin/hw/android.hardware.gatekeeper@1.0-service
